@@ -1,0 +1,15 @@
+li {
+    list-style-type: none;
+}
+
+.video-item img {
+    max-width: 64px;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #eee;
+}
