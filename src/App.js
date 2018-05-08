@@ -30,7 +30,6 @@ class App extends Component {
   }
 
   render() {
-    const videoSearch = _.debounce((term) => { this.videoSearch(term), 300 });
     const { videos, selectedVideo } = this.state;
     return (
       <div> 

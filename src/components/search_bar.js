@@ -16,15 +16,15 @@ class SearchBar extends Component {
                 /* onChange={event => this.onInputChange(event.target.value)} */ 
                 onKeyUp={(e)=> e.keyCode === 13} 
                 onChange={(e)=> this.setState({term: e.target.value})} />
-                <button className="button" onClick={() => this.onInputChange()}>Search</button>
+                <button className="button" onClick={() => this.props.app.videoSearch()}>Search</button>
             </div>
         );
     }
-    
+    /*
     onInputChange(term) {
         this.setState({term});
         this.props.app.videoSearch();
-    }
+    } */
 }
 
 export default SearchBar;
