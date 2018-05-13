@@ -29,14 +29,17 @@ class App extends Component {
     });
   }
 
+  videoSelect(video) {
+    this.setState({selectedVideo: video})
+  }
+
   render() {
     const { videos, selectedVideo } = this.state;
     return (
       <div> 
         <SearchBar app={this} />
         <VideoDetail app={this} video={selectedVideo} />
-        <VideoList app={this} videos={videos}
-        onVideoSelect={(selectedVideo) => this.setState({selectedVideo})} />
+        <VideoList app={this} videos={videos} />
       </div>
     );
   }

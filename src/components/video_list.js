@@ -1,22 +1,12 @@
 import React from 'react';
 import VideoListItem from './video_list_item';
 
-const VideoList = (props) => {
-    // equal to const videos = props.videos;
-    const videoItems = props.videos.map((video) => {
-        return(
-            <VideoListItem 
-            onVideoSelect={props.onVideoSelect}
-            key={video.etag} 
-            video={video} />
-        );
-    });
-
-    return(
-        <ul className="list">
-            {videoItems}
-        </ul>
-    );
-}
+const VideoList = ({ videos, app}) => (
+    <ul className="list">
+        {videos.map((video) => 
+            <VideoListItem app={app} key={video.etag} video={video} />
+        )}
+    </ul>
+)
 
 export default VideoList;
