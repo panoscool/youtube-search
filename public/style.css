@@ -1,0 +1,39 @@
+/* search_bar */
+
+.search-bar {
+  margin: 20px;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 65%;
+}
+
+.logo {
+  margin-right: 10px;
+  width: 150px;
+  text-align: left;
+}
+
+/* video_list_item */
+
+.video-item img {
+  max-width: 64px;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #eee;
+}
+
+/* video_detail */
+
+.video-detail .details {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

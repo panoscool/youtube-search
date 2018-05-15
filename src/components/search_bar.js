@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../style/search_bar.css';
+import logo from './../logo.jpg';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -27,6 +27,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="search-bar">
+        <img src={logo} className="logo" alt="logo" />
         <input value={this.state.term} onKeyUp={(e) => this.handleKeyUp(e)} onChange={(e) => this.handleChange(e)} />
         <button className="button" onClick={() => this.search()}>Search</button>
       </div>

@@ -11,12 +11,12 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { 
+    this.state = {
       videos: [],
       selectedVideo: null
     }
 
-    this.videoSearch('trailers');
+    this.videoSearch('love songs');
   }
 
   videoSearch(term) {
@@ -35,7 +35,7 @@ class App extends Component {
   render() {
     const { videos, selectedVideo } = this.state;
     return (
-      <div> 
+      <div>
         <SearchBar app={this} />
         <VideoDetail app={this} video={selectedVideo} />
         <VideoList app={this} videos={videos} />
