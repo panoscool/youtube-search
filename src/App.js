@@ -35,10 +35,16 @@ class App extends Component {
   render() {
     const { videos, selectedVideo } = this.state;
     return (
-      <div>
+      <div className="container">
         <SearchBar app={this} />
-        <VideoDetail app={this} video={selectedVideo} />
-        <VideoList app={this} videos={videos} />
+        <div className="row">
+          <div className="col-md-8 col-xs-12">
+            <VideoDetail app={this} video={selectedVideo} />
+          </div>
+          <div className="col-md-4 col-xs-12">
+            <VideoList app={this} videos={videos} />
+          </div>
+        </div>
       </div>
     );
   }
