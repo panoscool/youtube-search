@@ -1,21 +1,16 @@
 import React from 'react';
 
-const VideoDetail = ({video}) => {
-  if(!video) {
+const VideoDetail = ({ match }) => {
+  if(!(match && match.params && match.params.id)) {
     return <div></div>;
   }
 
-  const videoId = video.id.videoId;
-  const url = `https:www.youtube.com/embed/${videoId}`;
-  // equal to const url = 'https:www.youtube.com/embed/' + videoId;
+  const url = `https://www.youtube.com/embed/${match.params.id}`;
+
   return (
     <div className="video-detail">
       <div className="embed-responsive embed-responsive-16by9">
-        <iframe className="embed-responsive-item" title="video" src={url} allowFullScreen> </iframe>
-      </div>
-      <div className="details">
-        <div>{video.snippet.title}</div>
-        <div>{video.snippet.description}</div>
+        <iframe className="embed-responsive-item" title="video" src={url} allowFullScreen></iframe>
       </div>
     </div>
   );

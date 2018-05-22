@@ -6,7 +6,7 @@ class SearchBar extends Component {
     super(props);
 
     this.state = {
-      term: ''
+      term: localStorage.getItem('search') || ''
     }
   }
 
@@ -21,6 +21,7 @@ class SearchBar extends Component {
   }
 
   search() {
+    localStorage.setItem('search', this.state.term);
     this.props.app.videoSearch(this.state.term);
   }
 
