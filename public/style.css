@@ -15,6 +15,10 @@
   text-align: left;
 }
 
+.button {
+  cursor: pointer;
+}
+
 /* video_list_item */
 
 .video-item img {
@@ -27,6 +31,10 @@
 
 .list-group-item:hover {
   background-color: #eee;
+}
+
+.media-body {
+  margin-left: 10px;
 }
 
 /* video_detail */
