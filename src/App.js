@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
@@ -35,17 +36,21 @@ class App extends Component {
   render() {
     const { videos, selectedVideo } = this.state;
     return (
+      <Router>
       <div className="container">
         <SearchBar app={this} />
         <div className="row">
           <div className="col-md-8 col-xs-12">
-            <VideoDetail app={this} video={selectedVideo} />
+
+            <Route path="/" render={() => <VideoDetail app={this} video={selectedVideo} />} />
+
           </div>
           <div className="col-md-4 col-xs-12">
             <VideoList app={this} videos={videos} />
           </div>
         </div>
       </div>
+      </Router>
     );
   }
 }
